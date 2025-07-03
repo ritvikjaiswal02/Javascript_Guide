@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="h1" class="h1">Learning Dom today</h1>
+    <h1 class="h1">Learning Dom today - 2</h1>
+
+    <p class="para" id="pa">Lorem ipsum dolor sit, amet maxime</p>
+    <p class="para" id="pa">Lorem ipsum dolor sit, amet maxime</p>
+
+    <script>
+      //   let e1 = document.getElementById(`h1`);
+      //   let e2 = document.getElementsByTagName(`h1`);
+      //   console.log(e1);
+      //   console.log(e2);
+
+      let element = document.querySelector(`#pa`);
+      let elements = document.querySelectorAll(`p`);
+      console.log(element);
+      console.log(elements);
+    </script>
+  </body>
+</html>

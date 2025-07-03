@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title></head
+  ><style>
+    body {
+      background-color: orange;
+      color: blue;
+      text-decoration-color: blueviolet;
+    }
+    div {
+      background-color: aqua;
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+  <body>
+    <h1>WE doing Events</h1>
+
+    <!-- <button onclick="changeToDark()">change to Dark</button>
+    <button onmouseover="changeToLight()">change to Light</button> -->
+
+    <button id="bt1">change to Dark</button>
+    <button id="bt2">change to Light</button>
+
+    <div onmouseover="bgChange()" onmouseleave="bgChange2()"></div>
+    <script>
+      let bt1 = document.querySelector(`#bt1`);
+      let bt2 = document.querySelector(`#bt2`);
+
+      //   let changeToDark = () => {
+      //     document.body.style.backgroundColor = `black`;
+      //     document.body.style.color = ` white`;
+      //   };
+
+      //   let changeToLight = () => {
+      //     document.body.style.backgroundColor = `white`;
+      //     document.body.style.color = `dark`;
+      //   };
+      //   bt1.addEventListener(`click`, changeToDark);
+      bt1.addEventListener(`click`, (e) => {
+        document.body.style.backgroundColor = `black`;
+        document.body.style.color = ` white`;
+
+        console.log(e.type);
+        console.log(e.target);
+      });
+      bt2.addEventListener(`mouseover`, () => {
+        document.body.style.backgroundColor = `white`;
+        document.body.style.color = `dark`;
+      });
+
+      let bgChange = () => {
+        let div = document.querySelector(`div`);
+        div.style.backgroundColor = `yellow`;
+      };
+
+      let bgChange2 = () => {
+        let div = document.querySelector(`div`);
+        div.style.backgroundColor = `aqua`;
+      };
+    </script>
+  </body>
+</html>
